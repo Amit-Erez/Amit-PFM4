@@ -10,16 +10,17 @@
       src="https://kit.fontawesome.com/03474dd0d4.js"
       crossorigin="anonymous"
     ></script>
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init({
-        publicKey: "5VZC1HMNHpYKqxBRl",
-      });
-   })();
-</script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "5VZC1HMNHpYKqxBRl",
+        });
+      })();
+    </script>
   </head>
 
   <body>
@@ -29,7 +30,7 @@
           <img class="amit-logo" src="./assets/logo.svg" alt="" />
         </figure>
         <ul class="nav__link--list">
-          <li class="nav__link">
+          <li class="nav__link" onclick="toggleModal()">
             <a
               href="#"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
@@ -43,17 +44,15 @@
               >Projects</a
             >
           </li>
-          <li class="nav__link">
+          <li class="nav__link" onclick="toggleModal()">
             <a
               href="#"
-              class="nav__link--anchor link__hover-effect link__hover-effect--black" onclick="toggleModal()"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
               >Contact</a
             >
           </li>
           <li class="nav__link--click click" onclick="toggleContrast()">
-            <a
-              href="#"
-              class="nav__link--anchor nav__bw--img"
+            <a href="#" class="nav__link--anchor nav__bw--img"
               ><i class="fa-solid fa-circle-half-stroke"></i
             ></a>
           </li>
@@ -67,7 +66,8 @@
             I'm a <b class="purple">Frontend Software Engineer</b> with a strong
             passion for building web applications with great user experience.
             <br />
-            Here's a bit more <b class="purple click" onclick="toggleModal()">about me</b>.
+            Here's a bit more
+            <b class="purple click" onclick="toggleModal()">about me</b>.
           </p>
           <div class="social__list">
             <a
@@ -94,9 +94,11 @@
           </div>
         </div>
       </header>
-      <button class="mail__btn click" onclick="toggleModal()">
-        <i class="fa-solid fa-envelope"></i>
-      </button>
+      <a href="#">
+          <button class="mail__btn click" onclick="toggleModal()">
+            <i class="fa-solid fa-envelope"></i>
+          </button>
+      </a>
       <a href="#projects" class="scroll">
         <div class="scroll__icon click"></div>
       </a>
@@ -109,69 +111,97 @@
             Frontend Software Engineer
           </h4>
           <p class="modal__para">
-            I'm a 45 year-old American <b class="purple">frontend software engineer</b> with
-            a strong passion for developing websites with great <b class="purple">user experiences.</b>
-            <br>
+            I'm a 45 year-old American
+            <b class="purple">frontend software engineer</b> with a strong
+            passion for developing websites with great
+            <b class="purple">user experiences.</b>
+            <br />
             I currently solve extremely difficult engineering problems every day
             with React, TypeScript and MobX in Canva's Video team.
           </p>
           <div class="modal__languages">
             <figure class="modal__language">
-                <img src="./assets/HTML5_Badge.svg.png" class="modal__language--img" alt="">
-                <div class="language__name">HTML</div>
+              <img
+                src="./assets/HTML5_Badge.svg.png"
+                class="modal__language--img"
+                alt=""
+              />
+              <div class="language__name">HTML</div>
             </figure>
             <figure class="modal__language">
-                <img src="./assets/css-131-722685.png" class="modal__language--img" alt="">
-                <div class="language__name">CSS</div>
+              <img
+                src="./assets/css-131-722685.png"
+                class="modal__language--img"
+                alt=""
+              />
+              <div class="language__name">CSS</div>
             </figure>
             <figure class="modal__language">
-                <img src="./assets/javascript-1-225993.png" class="modal__language--img" alt="">
-                <div class="language__name">JavaScript</div>
+              <img
+                src="./assets/javascript-1-225993.png"
+                class="modal__language--img"
+                alt=""
+              />
+              <div class="language__name">JavaScript</div>
             </figure>
             <figure class="modal__language">
-                <img src="./assets/react-3-1175109.png" class="modal__language--img" alt="">
-                <div class="language__name">React</div>
+              <img
+                src="./assets/react-3-1175109.png"
+                class="modal__language--img"
+                alt=""
+              />
+              <div class="language__name">React</div>
             </figure>
           </div>
         </div>
         <div class="modal__half modal__contact">
-            <h3 class="modal__title modal__title--contact">Let's have a chat!</h3>
-            <h4 class="modal__sub-title modal__sub-title--contact">I'd love to hear from you</h4>
-            <form id="contact__form" onsubmit="contact(event)">
-                <div class="form__item">
-                    <label class="form__item--name">Name</label>
-                    <input class="input" name="user_name" type="text"></input>
-                </div>
-                <div class="form__item">
-                    <label class="form__item--name">Email</label>
-                    <input class="input" name="user_email" type="text"></input>
-                </div>
-                <div class="form__item">
-                    <label class="form__item--name">Message</label>
-                    <textarea class="input" name="user_message" type="text"></textarea>
-                </div>
-                <button id="contact__submit" class="form__submit">
-                    Send it my way
-                </button>
-            </form>
-            <div class="modal__overlay modal__overlay--loading">
-                <i class="fa-solid fa-spinner"></i>
+          <h3 class="modal__title modal__title--contact">Let's have a chat!</h3>
+          <h4 class="modal__sub-title modal__sub-title--contact">
+            I'd love to hear from you
+          </h4>
+          <form id="contact__form" onsubmit="contact(event)">
+            <div class="form__item">
+              <label class="form__item--name">Name</label>
+              <input class="input" name="user_name" type="text" required />
             </div>
-            <div class="modal__overlay modal__overlay--success">
-                Thanks for the message! Looking forward to speaking with you soon.
+            <div class="form__item">
+              <label class="form__item--name">Email</label>
+              <input class="input" name="user_email" type="text" required />
             </div>
-            <i class="fa-solid fa-xmark modal__exit click" onclick="toggleModal()"></i>
+            <div class="form__item">
+              <label class="form__item--name" required>Message</label>
+              <textarea
+                class="input"
+                name="user_message"
+                type="text"
+                required
+              ></textarea>
+            </div>
+            <button id="contact__submit" class="form__submit">
+              Send it my way
+            </button>
+          </form>
+          <div class="modal__overlay modal__overlay--loading">
+            <i class="fa-solid fa-spinner"></i>
+          </div>
+          <div class="modal__overlay modal__overlay--success">
+            Thanks for the message! Looking forward to speaking with you soon.
+          </div>
+          <i
+            class="fa-solid fa-xmark modal__exit click"
+            onclick="toggleModal()"
+          ></i>
         </div>
       </div>
-      <img src="./assets/semi circle.svg" class="shape shape--0">
-      <img src="./assets/circle.svg" class="shape shape--1">
-      <img src="./assets/squiggly.svg" class="shape shape--2">
-      <img src="./assets/circle.svg" class="shape shape--3">
-      <img src="./assets/triangle.svg" class="shape shape--4">
-      <img src="./assets/circle.svg" class="shape shape--5">
-      <img src="./assets/squiggly.svg" class="shape shape--6">
-      <img src="./assets/circle.svg" class="shape shape--7">
-      <img src="./assets/semi circle.svg" class="shape shape--8">
+      <img src="./assets/semi circle.svg" class="shape shape--0" />
+      <img src="./assets/circle.svg" class="shape shape--1" />
+      <img src="./assets/squiggly.svg" class="shape shape--2" />
+      <img src="./assets/circle.svg" class="shape shape--3" />
+      <img src="./assets/triangle.svg" class="shape shape--4" />
+      <img src="./assets/circle.svg" class="shape shape--5" />
+      <img src="./assets/squiggly.svg" class="shape shape--6" />
+      <img src="./assets/circle.svg" class="shape shape--7" />
+      <img src="./assets/semi circle.svg" class="shape shape--8" />
     </section>
     <section id="projects">
       <div class="container">
@@ -275,7 +305,8 @@
             </a>
             <a
               href="#"
-              class="footer__social--link link__hover-effect link__hover-effect--white" onclick="toggleModal()"
+              class="footer__social--link link__hover-effect link__hover-effect--white"
+              onclick="toggleModal()"
             >
               Contact
             </a>
@@ -287,7 +318,7 @@
               Resume
             </a>
           </div>
-          <div class="footer__copyright">Copyright © 2025 Amit Erez</div>
+          <div class="footer__copyright">Made by Amit Erez // 2025</div>
         </div>
       </div>
     </footer>
